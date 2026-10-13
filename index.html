@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huaral Verde - Lotes Campestres desde 250 m²</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f2f7f4',
+                            600: '#2d5a3c',
+                            700: '#1e3f29',
+                            800: '#173121',
+                            900: '#112418',
+                        },
+                        earth: {
+                            gold: '#c5a880',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-forest-600 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="flex items-center space-x-2 group">
+                <div class="text-forest-700 text-2xl font-bold tracking-tight flex items-center">
+                    <svg class="w-9 h-9 mr-2 text-forest-700" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 19h20L12 2zm0 3.8l6.8 12.2H5.2L12 5.8z"/>
+                        <path d="M12 9l-4 7h8l-4-7z" fill="#c5a880"/>
+                    </svg>
+                    <div class="leading-none">
+                        <span class="block text-xl font-extrabold tracking-wider text-forest-800">HUARAL VERDE</span>
+                        <span class="block text-[9px] tracking-widest text-gray-500 uppercase font-semibold">Lotes Campestres</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+                <a href="#inicio" class="hover:text-forest-700 transition font-semibold text-forest-700 border-b-2 border-forest-700 pb-1">Inicio</a>
+                <a href="#nosotros" class="hover:text-forest-700 transition">Nosotros</a>
+                <a href="#lotes" class="hover:text-forest-700 transition">Lotes</a>
+                <a href="#ubicacion" class="hover:text-forest-700 transition">Ubicación</a>
+                <a href="#contacto" class="hover:text-forest-700 transition">Contacto</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://wa.me/51902770246?text=Hola,%20deseo%20más%20información%20sobre%20los%20lotes%20en%20Huaral" target="_blank" class="bg-forest-700 hover:bg-forest-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition flex items-center space-x-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Escríbenos por WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-lg hover:bg-gray-100">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-xl">
+            <a href="#inicio" class="block text-gray-700 hover:text-forest-700 font-medium py-1">Inicio</a>
+            <a href="#nosotros" class="block text-gray-700 hover:text-forest-700 font-medium py-1">Nosotros</a>
+            <a href="#lotes" class="block text-gray-700 hover:text-forest-700 font-medium py-1">Lotes</a>
+            <a href="#ubicacion" class="block text-gray-700 hover:text-forest-700 font-medium py-1">Ubicación</a>
+            <a href="#contacto" class="block text-gray-700 hover:text-forest-700 font-medium py-1">Contacto</a>
+            <div class="pt-2">
+                <a href="https://wa.me/51902770246?text=Hola,%20deseo%20más%20información%20sobre%20los%20lotes%20en%20Huaral" target="_blank" class="w-full bg-forest-700 text-white text-center font-semibold py-2.5 rounded-xl shadow flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>Escríbenos por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative pt-20 lg:pt-24 min-h-[90vh] flex items-center justify-center bg-gray-900 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1920&auto=format&fit=crop" alt="Paisaje de Huaral" class="w-full h-full object-cover object-center scale-105 animate-pulse duration-1000 opacity-80" style="animation-duration: 10s;">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full text-white">
+            <div class="max-w-2xl">
+                <span class="inline-block bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4">
+                    Tu casa de campo empieza aquí
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Lotes en Huaral <br class="hidden sm:inline">desde <span class="text-earth-gold">250 m²</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 mb-8 font-light leading-relaxed">
+                    Vive rodeado de naturaleza, aire puro y tranquilidad. Haz realidad tu casa de campo en una de las mejores zonas de Huaral.
+                </p>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#lotes" class="bg-forest-700 hover:bg-forest-800 text-white text-center font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition flex items-center justify-center space-x-2 border border-forest-600/50">
+                        <span>Ver lotes disponibles</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                    <button onclick="openModal('Cotización General')" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl transition border border-white/30 text-center">
+                        Solicitar Asesoría
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-12 hidden lg:flex items-center space-x-8 text-white/80 text-sm font-medium">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle text-earth-gold"></i>
+                    <span>Títulos Independientes</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle text-earth-gold"></i>
+                    <span>Agua y Luz</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle text-earth-gold"></i>
+                    <span>Áreas Verdes y Recreativas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-forest-50 border-y border-forest-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center mb-3 text-xl">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Entorno natural</h3>
+                    <p class="text-xs text-gray-500 mt-1">y seguro</p>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center mb-3 text-xl">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Excelente ubicación</h3>
+                    <p class="text-xs text-gray-500 mt-1">en Huaral</p>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center mb-3 text-xl">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Fácil acceso</h3>
+                    <p class="text-xs text-gray-500 mt-1">desde la Panamericana</p>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center mb-3 text-xl">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Servicios básicos</h3>
+                    <p class="text-xs text-gray-500 mt-1">(según etapa del proyecto)</p>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition col-span-2 md:col-span-1">
+                    <div class="w-12 h-12 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center mb-3 text-xl">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 text-sm">Ideal para tu casa</h3>
+                    <p class="text-xs text-gray-500 mt-1">de campo o inversión</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lotes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-forest-700 font-semibold text-sm uppercase tracking-wider block mb-2">Nuestros Lotes</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+                        Espacios desde 250 m² <br>para construir tus sueños
+                    </h2>
+                </div>
+                <p class="mt-4 md:mt-0 text-gray-600 max-w-md text-sm sm:text-base">
+                    Contamos con lotes bien ubicados, ideales para que diseñes y construyas la casa de campo que siempre imaginaste.
+                </p>
+            </div>
+
+            <!-- Lots Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Lote 01 -->
+                <div class="bg-white rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Lote 01" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Disponible</span>
+                        <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full">
+                            <i class="fas fa-expand-arrows-alt mr-1"></i> 250 m²
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Lote 01 - Zona Norte</h3>
+                            <p class="text-gray-600 text-sm mb-4">Ubicación privilegiada frente a áreas verdes, ideal para modelos de una planta con terraza.</p>
+                            <div class="flex items-center space-x-4 text-xs text-gray-500 mb-6 border-t border-b border-gray-100 py-3">
+                                <div><i class="fas fa-ruler-combined text-forest-700 mr-1"></i> 10m x 25m</div>
+                                <div><i class="fas fa-file-alt text-forest-700 mr-1"></i> Título Independiente</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="block text-xs text-gray-400">Precio desde</span>
+                                <span class="text-xl font-extrabold text-forest-800">S/ 45,000</span>
+                            </div>
+                            <button onclick="openModal('Lote 01 - 250 m² - S/ 45,000')" class="bg-forest-700 hover:bg-forest-800 text-white p-3 rounded-2xl shadow transition flex items-center justify-center group-hover:bg-forest-900">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lote 02 -->
+                <div class="bg-white rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Lote 02" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Disponible</span>
+                        <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full">
+                            <i class="fas fa-expand-arrows-alt mr-1"></i> 300 m²
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Lote 02 - Zona Central</h3>
+                            <p class="text-gray-600 text-sm mb-4">Amplio terreno con vista panorámica a las colinas, perfecto para jardín y piscina privada.</p>
+                            <div class="flex items-center space-x-4 text-xs text-gray-500 mb-6 border-t border-b border-gray-100 py-3">
+                                <div><i class="fas fa-ruler-combined text-forest-700 mr-1"></i> 12m x 25m</div>
+                                <div><i class="fas fa-file-alt text-forest-700 mr-1"></i> Título Independiente</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="block text-xs text-gray-400">Precio desde</span>
+                                <span class="text-xl font-extrabold text-forest-800">S/ 54,000</span>
+                            </div>
+                            <button onclick="openModal('Lote 02 - 300 m² - S/ 54,000')" class="bg-forest-700 hover:bg-forest-800 text-white p-3 rounded-2xl shadow transition flex items-center justify-center group-hover:bg-forest-900">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lote 03 -->
+                <div class="bg-white rounded-3xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=800&auto=format&fit=crop" alt="Lote 03" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Disponible</span>
+                        <div class="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full">
+                            <i class="fas fa-expand-arrows-alt mr-1"></i> 350 m²
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Lote 03 - Esquina Premium</h3>
+                            <p class="text-gray-600 text-sm mb-4">Lote esquinero con doble frontis, máxima independencia y excelente iluminación natural todo el día.</p>
+                            <div class="flex items-center space-x-4 text-xs text-gray-500 mb-6 border-t border-b border-gray-100 py-3">
+                                <div><i class="fas fa-ruler-combined text-forest-700 mr-1"></i> 14m x 25m</div>
+                                <div><i class="fas fa-file-alt text-forest-700 mr-1"></i> Título Independiente</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-2">
+                            <div>
+                                <span class="block text-xs text-gray-400">Precio desde</span>
+                                <span class="text-xl font-extrabold text-forest-800">S/ 65,000</span>
+                            </div>
+                            <button onclick="openModal('Lote 03 - 350 m² - S/ 65,000')" class="bg-forest-700 hover:bg-forest-800 text-white p-3 rounded-2xl shadow transition flex items-center justify-center group-hover:bg-forest-900">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button onclick="openModal('Catálogo Completo de Lotes')" class="inline-flex items-center space-x-2 bg-forest-700 hover:bg-forest-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg transition">
+                    <i class="fas fa-th-large"></i>
+                    <span>Ver todos los lotes disponibles</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-20 bg-forest-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop" alt="Casa de campo en Huaral" class="w-full h-[400px] sm:h-[450px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-forest-800 text-white p-6 rounded-3xl shadow-xl hidden sm:block max-w-xs">
+                        <div class="text-3xl font-extrabold text-earth-gold mb-1">100%</div>
+                        <p class="text-xs text-gray-300">Documentación en regla, inscritos en Registros Públicos (SUNARP).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-forest-700 font-semibold text-sm uppercase tracking-wider block mb-2">¿Por qué Huaral?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        Un lugar ideal para tu vida en el campo
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Huaral combina naturaleza, clima agradable y cercanía a Lima, convirtiéndose en el lugar perfecto para disfrutar de la tranquilidad sin alejarte de la ciudad.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-forest-700 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Clima cálido todo el año</h4>
+                                <p class="text-sm text-gray-600">Disfruta del sol y aire limpio lejos de la neblina limeña.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-forest-700 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Paisajes hermosos y aire limpio</h4>
+                                <p class="text-sm text-gray-600">Entorno campestre exclusivo con vistas increíbles a las montañas.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-forest-700 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Crecimiento y plusvalía</h4>
+                                <p class="text-sm text-gray-600">Inversión inteligente con alta revalorización proyectada.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded-full bg-forest-700 text-white flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">A pocos minutos de la Panamericana Norte</h4>
+                                <p class="text-sm text-gray-600">Acceso rápido y asfaltado directo al proyecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-forest-700 font-semibold text-sm uppercase tracking-wider block mb-2">Ubicación Estratégica</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                    Fácil acceso y cerca de todo
+                </h2>
+                <p class="text-gray-600">
+                    Nuestro proyecto campestre en Huaral está ubicado en una zona de alta tranquilidad pero con excelente conectividad vial.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div class="space-y-6">
+                    <div class="bg-forest-50 p-6 rounded-3xl border border-forest-100">
+                        <div class="w-10 h-10 rounded-xl bg-forest-700 text-white flex items-center justify-center mb-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Ubicación Exacta</h4>
+                        <p class="text-sm text-gray-600">Valle de Huaral, Km 7.5 (A 10 minutos del centro de Huaral).</p>
+                    </div>
+
+                    <div class="bg-forest-50 p-6 rounded-3xl border border-forest-100">
+                        <div class="w-10 h-10 rounded-xl bg-forest-700 text-white flex items-center justify-center mb-4">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-1">Ruta de Llegada</h4>
+                        <p class="text-sm text-gray-600">Desvío asfaltado desde la Panamericana Norte con señalización permanente.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 h-[400px] rounded-3xl overflow-hidden shadow-xl border border-gray-200">
+                    <!-- Embedded interactive map mockup -->
+                    <iframe title="Mapa Huaral Verde" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.755490013233!2d-77.214!3d-11.493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDI5JzM0LjgiUyA3N8KwMTInNTAuNCJX!5e0!3m2!1ses!2spe!4v1620000000000!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="relative py-16 bg-forest-900 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1920&auto=format&fit=crop" alt="Fondo" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mx-auto mb-6 text-earth-gold text-2xl">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Tu lote, tu proyecto, tu futuro</h2>
+            <p class="text-gray-300 max-w-xl mx-auto mb-8 text-sm sm:text-base">
+                Contáctanos hoy mismo, agenda una visita guiada a nuestros lotes en Huaral y recibe asesoría personalizada. ¡Te esperamos!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://wa.me/51902770246?text=Hola,%20deseo%20agendar%20una%20visita%20a%20los%20lotes%20en%20Huaral" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Escríbenos por WhatsApp</span>
+                </a>
+                <button onclick="openModal('Agendar Visita Guiada')" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl transition border border-white/20">
+                    Solicitar Cotización Escrita
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-forest-950 text-gray-400 py-12 border-t border-forest-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 pb-8 border-b border-forest-900">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <svg class="w-8 h-8 text-forest-700" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 19h20L12 2zm0 3.8l6.8 12.2H5.2L12 5.8z"/>
+                        <path d="M12 9l-4 7h8l-4-7z" fill="#c5a880"/>
+                    </svg>
+                    <span class="text-xl font-bold text-white tracking-wider">HUARAL VERDE</span>
+                </div>
+                <div class="flex items-center space-x-6 text-sm">
+                    <a href="#inicio" class="hover:text-white transition">Inicio</a>
+                    <a href="#nosotros" class="hover:text-white transition">Nosotros</a>
+                    <a href="#lotes" class="hover:text-white transition">Lotes</a>
+                    <a href="#ubicacion" class="hover:text-white transition">Ubicación</a>
+                    <a href="#contacto" class="hover:text-white transition">Contacto</a>
+                </div>
+                <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="w-10 h-10 rounded-full bg-forest-900 hover:bg-forest-800 text-white flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-forest-900 hover:bg-forest-800 text-white flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/51902770246" class="w-10 h-10 rounded-full bg-forest-900 hover:bg-forest-800 text-white flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2026 Huaral Verde Lotes Campestres. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0 flex items-center"><i class="fas fa-map-marker-alt text-earth-gold mr-1"></i> Huaral, Lima - Perú</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51902770246?text=Hola,%20deseo%20más%20información%20sobre%20los%20lotes%20en%20Huaral" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform hover:scale-110 focus:outline-none" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="inline-block bg-forest-50 text-forest-700 text-xs font-bold px-3 py-1 rounded-full mb-2">Asesoría Inmobiliaria</span>
+                <h3 id="modalTitle" class="text-2xl font-extrabold text-gray-900">Cotizar Lote</h3>
+                <p class="text-xs text-gray-500 mt-1">Completa tus datos y un asesor te contactará de inmediato.</p>
+            </div>
+
+            <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Nombre y Apellido</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest-700 focus:ring-1 focus:ring-forest-700 outline-none text-sm" placeholder="Ej. Juan Pérez">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Teléfono / WhatsApp</label>
+                    <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest-700 focus:ring-1 focus:ring-forest-700 outline-none text-sm" placeholder="Ej. 999 999 999">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Correo Electrónico</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest-700 focus:ring-1 focus:ring-forest-700 outline-none text-sm" placeholder="ejemplo@correo.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Mensaje o Pregunta</label>
+                    <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest-700 focus:ring-1 focus:ring-forest-700 outline-none text-sm" placeholder="Me interesa conocer disponibilidad y facilidades de pago..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-forest-700 hover:bg-forest-800 text-white font-semibold py-3.5 rounded-xl shadow-lg transition">
+                    Enviar Solicitud
+                </button>
+            </form>
+
+            <div id="successMessage" class="hidden text-center py-8">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900 mb-2">¡Solicitud Enviada!</h4>
+                <p class="text-sm text-gray-600 mb-6">Un asesor especializado se comunicará contigo en breve para brindarte planos y precios actualizados.</p>
+                <button onclick="closeModal()" class="bg-forest-700 text-white px-6 py-2.5 rounded-xl font-semibold text-sm">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Modal functionality
+        const quoteModal = document.getElementById('quoteModal');
+        const modalContent = document.getElementById('modalContent');
+        const modalTitle = document.getElementById('modalTitle');
+        const leadForm = document.getElementById('leadForm');
+        const successMessage = document.getElementById('successMessage');
+
+        function openModal(itemInfo) {
+            modalTitle.textContent = "Cotizar: " + itemInfo;
+            leadForm.reset();
+            leadForm.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+            quoteModal.classList.remove('hidden');
+            setTimeout(() => {
+                quoteModal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            quoteModal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                quoteModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Close modal on background click
+        quoteModal.addEventListener('click', (e) => {
+            if (e.target === quoteModal) {
+                closeModal();
+            }
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            leadForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
